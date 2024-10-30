@@ -58,7 +58,7 @@ operators.addEventListener("click", (event) => {
         } else if (secondNumber) {
             const result = operate(+firstNumber, currentSignal, +secondNumber);
             clear();
-            number.textContent = result;
+            number.textContent = Math.round(result * 1000) / 1000;
             if (signal != "=") {
                 operator.textContent = signal;
                 pointer = anotherNumber;
