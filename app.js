@@ -30,9 +30,11 @@ digits.addEventListener("click", (event) => {
     if (event.target.localName == "button") {
         if (pointer.textContent.length < 7) {
             const digit = event.target.textContent;
-            if (digit == "." && pointer.textContent.length < 6) {
-                if (!pointer.textContent.includes(".") 
-                    && pointer.textContent != "-")
+            if (digit == ".") {
+                if (
+                    !pointer.textContent.includes(".") 
+                    && pointer.textContent != "-"
+                    && pointer.textContent.length < 6)
                     pointer.textContent = +pointer.textContent + digit;
             } else if (pointer.textContent.includes(".")) {
                     pointer.textContent += digit;
