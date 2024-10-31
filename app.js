@@ -27,7 +27,7 @@ function clear() {
 
 const digits = document.querySelector("#digits")
 digits.addEventListener("click", (event) => {
-    if (event.target.localName == "button") {
+    if (event.target.localName == "button" && !event.target.id) {
         if (pointer.textContent.length < 7) {
             const digit = event.target.textContent;
             if (digit == ".") {
@@ -54,7 +54,7 @@ operators.addEventListener("click", (event) => {
 
         if (!+firstNumber && signal == "-") {
             number.textContent = "-";
-        } else if (firstNumber && !secondNumber && signal != "=") {
+        } else if (firstNumber != "-" && !secondNumber && signal != "=") {
             operator.textContent = signal;
             pointer = anotherNumber;
         } else if (secondNumber) {
