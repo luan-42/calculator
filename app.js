@@ -52,7 +52,7 @@ operators.addEventListener("click", (event) => {
         const currentSignal = operator.textContent;
         const secondNumber = anotherNumber.textContent;
 
-        if (!+firstNumber && signal == "-") {
+        if (!+firstNumber && signal == "-" && !currentSignal) {
             number.textContent = "-";
         } else if (firstNumber != "-" && !secondNumber && signal != "=") {
             operator.textContent = signal;
