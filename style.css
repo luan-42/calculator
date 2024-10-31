@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+body {
+    margin: 0;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b4664;
+}
+
+#app {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+}
+
+#operators {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.container {
+    display: flex;
+    gap: 8px;
+    background-color: #252d44;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+#digits {
+    display: flex;
+    flex-direction: column;;
+    gap: 8px;
+}
+
+#digits > div {
+    display: flex;
+    gap: 8px;
+}
+
+.large {
+    flex-grow: 1;
+}
+
+button {
+    font-size: 32px;
+    border: none;
+    background-color: #eae3db;
+    border-bottom: 8px solid #aea699;
+    border-radius: 8px;
+    color: #414956;
+    font-family: "DM Serif Text", serif;
+    width: 100px;
+    height: 100px;
+}
+
+#display {
+    background-color: #181f32;
+    border-radius: 8px;
+    height: 60px;
+    font-size: 40px;
+    padding: 16px;
+    color: white;
+    margin-bottom: 16px;
+    font-family: "DM Serif Text", serif;
+    line-height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#equal {
+    background-color: #d13f30;
+    border-color: #932822;
+    color: #fff5ef;
+}
+
+#operator {
+    color: #d13f30;
+    margin: 0 8px;
+}
+
+@media (width <= 500px) {
+    button {
+        width: 60px;
+        height: 60px;
+    }
+}
