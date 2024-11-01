@@ -28,19 +28,14 @@ function clear() {
 const digits = document.querySelector("#digits")
 digits.addEventListener("click", (event) => {
     if (event.target.localName == "button" && !event.target.id) {
-        if (pointer.textContent.length < 7) {
-            const digit = event.target.textContent;
-            if (digit == ".") {
-                if (
-                    !pointer.textContent.includes(".") 
-                    && pointer.textContent != "-"
-                    && pointer.textContent.length < 6)
-                    pointer.textContent = +pointer.textContent + digit;
-            } else if (pointer.textContent.includes(".")) {
-                    pointer.textContent += digit;
-            } else
-                pointer.textContent = +(pointer.textContent + digit);
-        }
+        const digit = event.target.textContent;
+        if (digit == ".") {
+            if (!pointer.textContent.includes(".") && pointer.textContent != "-")
+                pointer.textContent = +pointer.textContent + digit;
+        } else if (pointer.textContent.includes(".")) {
+                pointer.textContent += digit;
+        } else
+            pointer.textContent = +(pointer.textContent + digit);
         }
 });
 
