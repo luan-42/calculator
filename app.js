@@ -56,7 +56,7 @@ operators.addEventListener("click", (event) => {
             number.textContent = "-";
         } else if (firstNumber != "-" && !secondNumber && signal != "=") {
             operator.textContent = signal;
-            pointer.textContent = +pointer.textContent;
+            number.textContent = +number.textContent;
             pointer = anotherNumber;
         } else if (secondNumber) {
             const result = operate(+firstNumber, currentSignal, +secondNumber);
