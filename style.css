@@ -10,6 +10,7 @@ body {
 }
 
 #app {
+    margin: 16px;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -54,8 +55,8 @@ button {
     border-radius: 8px;
     color: #414956;
     font-family: "DM Serif Text", serif;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
 }
 
 #display {
